@@ -1,15 +1,20 @@
 package test;
 
 import org.junit.Test;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 import static junit.framework.TestCase.assertEquals;
 
 public class SeleniumExamples extends Base {
 
     @Test
-    public void navigateBrowser() {
+    public void findElement() {
         driver.get("http://address-book-example.herokuapp.com");
 
-        assertEquals("Address Book", driver.getTitle());
+        WebElement id = driver.findElement(By.id("sign-in"));
+        WebElement css = driver.findElement(By.cssSelector("#sign-in"));
+
+        assertEquals(id, css);
     }
 
 }
