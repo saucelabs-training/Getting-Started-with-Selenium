@@ -1,28 +1,19 @@
 package test;
 
-import org.junit.After;
-import org.junit.Before;
+import io.github.bonigarcia.wdm.ChromeDriverManager;
 import org.junit.Test;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-public class SeleniumExamples extends Base {
-
-    private WebDriver browser;
-
-    @Before
-    public void setup() {
-        super.setup();
-        browser = new ChromeDriver();
-    }
-
-    @After
-    public void teardown() {
-        browser.quit();
-    }
+public class SeleniumExamples {
 
     @Test
     public void openBrowser() {
+        System.setProperty("wdm.targetPath", "lib/drivers/");
+        ChromeDriverManager.getInstance().setup();
+
+        WebDriver driver = new ChromeDriver();
+        driver.quit();
     }
 
 }
