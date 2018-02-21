@@ -10,7 +10,7 @@ public class LocateElements extends Base {
 
     @Test
     public void locateElement() {
-        driver.get("http://address-book-example.herokuapp.com/sign-in");
+        driver.get("http://address-book-example.herokuapp.com/sign_in");
 
         //
         // Define Elements for comparison
@@ -18,7 +18,7 @@ public class LocateElements extends Base {
 
         WebElement signInLink = driver.findElement(By.id("sign-in"));
         WebElement homeLink = driver.findElement(By.cssSelector("a"));
-        WebElement signInButton = driver.findElement(By.cssSelector("a[data-test=submit]"));
+        WebElement signInButton = driver.findElement(By.cssSelector("input[data-test=submit]"));
 
 
         //
