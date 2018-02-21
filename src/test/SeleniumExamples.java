@@ -9,7 +9,7 @@ public class SeleniumExamples {
 
     @Test
     public void openBrowser() {
-        System.setProperty("wdm.targetPath", "lib/drivers/");
+        System.setProperty("wdm.targetPath", "lib/drivers/auto/");
         ChromeDriverManager.getInstance().setup();
 
         WebDriver driver = new ChromeDriver();
