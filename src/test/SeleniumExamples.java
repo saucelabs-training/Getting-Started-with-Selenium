@@ -8,7 +8,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import static junit.framework.TestCase.assertEquals;
 
-public class SeleniumExamples extends BaseRemote {
+public class SeleniumExamples extends BaseSauce {
 
     @Test
     public void takeAction() throws InterruptedException {
