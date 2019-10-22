@@ -9,6 +9,8 @@ import org.junit.runner.Description;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
+import java.net.MalformedURLException;
+
 
 public class Base {
 
@@ -28,7 +30,7 @@ public class Base {
     };
 
     @Before
-    public void setup() {
+    public void setup() throws MalformedURLException {
         System.setProperty("wdm.targetPath", "lib/drivers/auto/");
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
