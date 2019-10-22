@@ -1,19 +1,15 @@
 package test;
 
-import io.github.bonigarcia.wdm.WebDriverManager;
 import org.junit.Test;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
+import static junit.framework.TestCase.assertEquals;
 
-public class SeleniumExamples {
+public class SeleniumExamples extends Base {
 
     @Test
-    public void openBrowser() {
-        System.setProperty("wdm.targetPath", "lib/drivers/auto/");
-        WebDriverManager.chromedriver().setup();
+    public void navigateBrowser() {
+        driver.get("http://a.testaddressbook.com");
 
-        WebDriver driver = new ChromeDriver();
-        driver.quit();
+        assertEquals("Address Book", driver.getTitle());
     }
 
 }
